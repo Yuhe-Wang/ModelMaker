@@ -1,0 +1,669 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MM.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\frame.ico"
+IDI_NEW                 ICON    DISCARDABLE     "res\\new.ico"
+IDI_UNDO                ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_REDO                ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_SELECT              ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_MOVE                ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_SIZE                ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_ROTATE              ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_OPEN                ICON    DISCARDABLE     "res\\open.ico"
+IDI_SAVE                ICON    DISCARDABLE     "res\\save.ico"
+IDI_OUTPUT              ICON    DISCARDABLE     "res\\output.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 201, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ModelMaker"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,13,21,21
+    LTEXT           "ModelMaker 1.0 版",IDC_STATIC,40,10,78,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011",IDC_STATIC,40,25,83,8
+    DEFPUSHBUTTON   "确定",IDOK,131,14,50,14,WS_GROUP
+    CTEXT           "USTC出品 PB08000668  汪玉鹤 ",IDC_STATIC,17,44,164,25,
+                    SS_CENTERIMAGE | WS_BORDER
+END
+
+IDD_MM_DIALOG DIALOGEX 0, 0, 772, 471
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ModelMaker  USTC出品  PB08000668 汪玉鹤"
+MENU IDR_MENU_TOP
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_ALL,"Static",SS_BLACKFRAME,7,27,643,413
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,652,25,118,415
+    PUSHBUTTON      "open",IDC_OPEN,5,0,26,26,BS_ICON | BS_FLAT
+    PUSHBUTTON      "new",IDC_NEWFILE,30,0,26,26,BS_ICON | BS_FLAT
+    PUSHBUTTON      "undo",IDC_UNDO,125,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "redo",IDC_REDO,151,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "select",IDC_SELECT,175,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "move",IDC_SELECT_MOVE,201,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "size",IDC_SELECT_SIZE,225,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "rotate",IDC_ROTATE,251,0,26,26,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_FLAT,WS_EX_STATICEDGE
+    PUSHBUTTON      "save",IDC_SAVE,55,0,26,26,BS_ICON | BS_FLAT
+    PUSHBUTTON      "save",IDC_OUTPUT,80,0,26,26,BS_ICON | BS_FLAT
+END
+
+IDD_PANEL_CREATE DIALOG DISCARDABLE  0, 0, 126, 403
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "名称和颜色",IDC_STATIC,32,141,50,8
+    GROUPBOX        "创建曲面",IDC_STATIC,0,5,115,130
+    PUSHBUTTON      "由文件导入",IDC_IMPORT,15,110,50,15
+    LTEXT           "",IDC_COLOR,105,150,13,14,SS_NOTIFY | WS_BORDER
+    EDITTEXT        IDC_NAME,5,150,95,12,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    COMBOBOX        IDC_COMBO_TYPES,15,15,85,65,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "长方体",IDC_CUBOID,15,35,35,15
+    PUSHBUTTON      "锥体",IDC_CONE,60,55,35,15
+    PUSHBUTTON      "球体",IDC_SPHERE,15,55,35,15
+    PUSHBUTTON      "柱体",IDC_CYLINDER,59,36,35,15
+    PUSHBUTTON      "圆环",IDC_TORUS,15,80,35,15
+    PUSHBUTTON      "管状体",IDC_PIPE,60,80,35,15
+    LTEXT           "static",IDC_PARA_AREA,0,170,125,230,NOT WS_VISIBLE
+END
+
+IDD_PANEL_MODIFY DIALOG DISCARDABLE  0, 0, 121, 383
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "点的拖动",IDC_STATIC,0,5,115,85
+    CONTROL         "开启",IDC_START_DRAG,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,40,5,30,10
+    GROUPBOX        "切割",IDC_STATIC,0,91,115,104
+    CONTROL         "开启",IDC_START_DISSECT,"Button",BS_AUTORADIOBUTTON,25,
+                    90,30,10
+    GROUPBOX        "加密",IDC_STATIC,0,200,115,72
+    CONTROL         "开启",IDC_START_DENSIFY,"Button",BS_AUTORADIOBUTTON,25,
+                    200,30,10
+    CONTROL         "Slider1",IDC_SLIDER_MOVE,"msctls_trackbar32",
+                    TBS_NOTICKS | WS_TABSTOP,0,229,114,14
+    EDITTEXT        IDC_PARALLEL_MOVE,83,253,23,14,ES_AUTOHSCROLL
+    CONTROL         "点选",IDC_POINT_CHOOSE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,0,32,32,9
+    CONTROL         "框形点击",IDC_BOX_CHOOSE,"Button",BS_AUTORADIOBUTTON,0,
+                    75,58,9
+    LTEXT           "光标宽度",IDC_STATIC,5,45,35,10
+    LTEXT           "光标高度",IDC_STATIC,5,57,36,10
+    LTEXT           "点的大小",IDC_STATIC,5,20,35,10
+    CONTROL         "Slider1",IDC_POINT_SIZE,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,40,17,68,13
+    CONTROL         "范围指示",IDC_CURSOR_BOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,43,33,51,8
+    CONTROL         "Slider1",IDC_CURSOR_WIDTH,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,39,43,68,13
+    CONTROL         "Slider1",IDC_CURSOR_HEIGHT,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,39,57,68,13
+    PUSHBUTTON      "移动",IDC_MOVE,5,105,30,15
+    PUSHBUTTON      "旋转",IDC_ROTATE,40,105,30,15
+    PUSHBUTTON      "缩放",IDC_KNIFE_SIZE,75,105,30,15
+    CONTROL         "Slider1",IDC_KNIFE_RATIO,"msctls_trackbar32",
+                    TBS_NOTICKS | WS_TABSTOP,0,135,115,13
+    LTEXT           "刀面比例（长：宽）",IDC_STATIC,5,125,75,10
+    PUSHBUTTON      "切割",IDC_CUT,3,167,30,19
+    LTEXT           "1/3           1            3",IDC_STATIC,0,150,114,10
+    CONTROL         "挑选3点创建刀面",IDC_3POINTS_KNIFE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,38,167,73,10
+    LTEXT           "tip：已挑选X个点",IDC_NUM_HASPICKED,38,181,66,8
+    GROUPBOX        "",IDC_STATIC,36,161,78,30
+    CONTROL         "选择性加密",IDC_DENSIFY_CHOOSED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,213,56,8
+    CTEXT           "移动量：",IDC_STATIC,49,253,32,12,SS_CENTERIMAGE
+    LTEXT           "-3            0            3",IDC_STATIC,0,243,114,10
+    PUSHBUTTON      "加密",IDC_DENSIFY,3,252,31,15
+    GROUPBOX        "融合",IDC_STATIC,0,277,115,72
+    CONTROL         "开启",IDC_START_MERGE,"Button",BS_AUTORADIOBUTTON,22,
+                    277,30,10
+END
+
+IDD_PANEL_STATE DIALOG DISCARDABLE  0, 0, 411, 27
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "cs",IDC_CHANGE_VIEWSTYLE,0,0,15,10
+    LTEXT           "坐标",IDC_STATIC,25,0,20,10
+    LTEXT           "",IDC_POSITION,45,0,80,10,WS_BORDER
+END
+
+IDD_CUBOID DIALOG DISCARDABLE  0, 0, 107, 166
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "键盘创建",IDC_STATIC,0,10,105,43
+    EDITTEXT        IDC_KB_X,15,20,25,10,ES_AUTOHSCROLL
+    LTEXT           "X",IDC_STATIC,5,20,8,10
+    EDITTEXT        IDC_KB_Y,15,30,25,10,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,5,30,8,10
+    EDITTEXT        IDC_KB_Z,15,40,25,10,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,5,40,8,10
+    EDITTEXT        IDC_KB_LENGTH,50,20,25,10,ES_AUTOHSCROLL
+    LTEXT           "长",IDC_STATIC,40,20,8,10
+    EDITTEXT        IDC_KB_WIDTH,50,30,25,10,ES_AUTOHSCROLL
+    LTEXT           "宽",IDC_STATIC,40,30,8,10
+    EDITTEXT        IDC_KB_HEIGHT,50,40,25,10,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,40,40,8,10
+    PUSHBUTTON      "创建",IDC_KB_CREATE,75,25,25,15
+    GROUPBOX        "参数",IDC_STATIC,0,55,105,75
+    EDITTEXT        IDC_PARA_LENGTH,15,75,25,10,ES_AUTOHSCROLL
+    LTEXT           "长",IDC_STATIC,5,75,8,10
+    EDITTEXT        IDC_PARA_WIDTH,15,85,25,10,ES_AUTOHSCROLL
+    LTEXT           "宽",IDC_STATIC,5,85,8,10
+    EDITTEXT        IDC_PARA_HEIGHT,15,95,25,10,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,5,95,8,10
+    CONTROL         "长方体",IDC_RADIO_CUBOID,"Button",BS_AUTORADIOBUTTON,5,
+                    0,35,10
+    CONTROL         "立方体",IDC_RADIO_CUBE,"Button",BS_AUTORADIOBUTTON,45,0,
+                    35,10
+    LISTBOX         IDC_LIST_NX,69,75,31,9,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "X分段",IDC_STATIC,46,76,20,10
+    LISTBOX         IDC_LIST_NY,69,85,31,9,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Y分段",IDC_STATIC,46,86,20,10
+    LISTBOX         IDC_LIST_NZ,69,96,31,9,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Z分段",IDC_STATIC,46,95,20,10
+END
+
+IDD_CYLINDER DIALOG DISCARDABLE  0, 0, 102, 165
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "正多变形",IDC_REGULAR_POLYGON,"Button",
+                    BS_AUTORADIOBUTTON,5,10,40,12
+    CONTROL         "任意多边形",IDC_NORMAL_POLYGON,"Button",
+                    BS_AUTORADIOBUTTON,45,10,50,12
+    GROUPBOX        "底面",IDC_STATIC,0,0,100,25
+    LISTBOX         IDC_LIST_DN,45,30,40,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "底面边数",IDC_STATIC,5,30,35,10
+    GROUPBOX        "从键盘创建",IDC_STATIC,0,45,100,60
+    LTEXT           "X",IDC_STATIC,5,55,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_X,15,55,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,5,70,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Y,15,70,25,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,5,85,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Z,15,85,25,12,ES_AUTOHSCROLL
+    LTEXT           "半径",IDC_STATIC,45,55,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_R,65,55,25,12,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,45,70,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_HEIGHT,65,70,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "创建",IDC_KB_CREATE,45,85,44,12
+    GROUPBOX        "参数：",IDC_STATIC,0,110,100,50
+    CTEXT           "半径",IDC_STATIC,5,120,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_R,25,120,25,12,ES_AUTOHSCROLL
+    CTEXT           "高",IDC_STATIC,5,135,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_HEIGHT,25,135,25,12,ES_AUTOHSCROLL
+    CTEXT           "分段",IDC_STATIC,55,120,15,10,SS_CENTERIMAGE
+    CTEXT           "分段",IDC_STATIC,55,135,15,10,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_NR,70,120,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NH,70,135,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SPHERE DIALOG DISCARDABLE  0, 0, 102, 156
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "从键盘创建",IDC_STATIC,0,5,100,61
+    LTEXT           "X",IDC_STATIC,10,16,8,8
+    EDITTEXT        IDC_KB_X,19,15,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,10,31,8,8
+    EDITTEXT        IDC_KB_Z,19,30,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,50,17,8,8
+    EDITTEXT        IDC_KB_Y,65,15,23,12,ES_AUTOHSCROLL
+    LTEXT           "R",IDC_STATIC,50,32,8,8
+    EDITTEXT        IDC_KB_R,65,30,23,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "创建",IDC_KB_CREATE,20,45,65,16
+    GROUPBOX        "参数",IDC_STATIC,0,70,100,56
+    LTEXT           "R",IDC_STATIC,25,80,8,8
+    EDITTEXT        IDC_PARA_R,55,80,30,12,ES_AUTOHSCROLL
+    LTEXT           "经向分段",IDC_STATIC,10,95,32,11
+    LTEXT           "纬向分段",IDC_STATIC,10,110,32,11
+    LISTBOX         IDC_LIST_NJ,55,95,30,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NW,55,110,30,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CONE DIALOG DISCARDABLE  0, 0, 110, 161
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "正多边形",IDC_REGULAR_POLYGON,"Button",
+                    BS_AUTORADIOBUTTON,5,15,41,12
+    CONTROL         "任意多边形",IDC_NORMAL_POLYGON,"Button",
+                    BS_AUTORADIOBUTTON,45,15,50,12
+    GROUPBOX        "底面类型",IDC_STATIC,0,5,100,27
+    LISTBOX         IDC_LIST_DN,45,35,40,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "底面边数",IDC_STATIC,5,35,35,10
+    GROUPBOX        "从键盘创建",IDC_STATIC,0,45,100,60
+    LTEXT           "X",IDC_STATIC,5,60,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_X,15,60,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,5,75,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Y,15,75,25,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,5,90,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Z,15,90,25,12,ES_AUTOHSCROLL
+    LTEXT           "半径",IDC_STATIC,45,60,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_R,65,60,25,12,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,45,75,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_HEIGHT,65,75,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "创建",IDC_KB_CREATE,45,90,44,12
+    GROUPBOX        "参数：",IDC_STATIC,0,110,100,45
+    CTEXT           "半径",IDC_STATIC,5,120,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_R,25,120,25,12,ES_AUTOHSCROLL
+    CTEXT           "高",IDC_STATIC,5,135,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_HEIGHT,25,135,25,12,ES_AUTOHSCROLL
+    CTEXT           "分段",IDC_STATIC,55,120,15,10,SS_CENTERIMAGE
+    CTEXT           "分段",IDC_STATIC,55,135,15,10,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_NR,70,120,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NH,70,135,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TORUS DIALOG DISCARDABLE  0, 0, 107, 142
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "从键盘创建",IDC_STATIC,0,5,100,60
+    LTEXT           "X",IDC_STATIC,5,15,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_X,15,15,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,5,30,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Y,15,30,25,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,5,44,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Z,15,44,25,12,ES_AUTOHSCROLL
+    LTEXT           "R",IDC_STATIC,45,15,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_R,65,15,25,12,ES_AUTOHSCROLL
+    LTEXT           "r",IDC_STATIC,45,30,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_INNER_R,65,30,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "创建",IDC_KB_CREATE,45,45,44,12
+    GROUPBOX        "参数：",IDC_STATIC,0,70,100,46
+    CTEXT           "R",IDC_STATIC,5,86,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_R,13,85,25,12,ES_AUTOHSCROLL
+    CTEXT           "r",IDC_STATIC,5,100,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_INNER_R,13,101,25,12,ES_AUTOHSCROLL
+    CTEXT           "经向分段",IDC_STATIC,40,85,32,10,SS_CENTERIMAGE
+    CTEXT           "维向分段",IDC_STATIC,41,100,31,10,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_NJ,72,85,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NW,72,100,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PIPE DIALOG DISCARDABLE  0, 0, 112, 156
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "侧边数",IDC_STATIC,50,120,25,10,SS_CENTERIMAGE
+    GROUPBOX        "从键盘创建",IDC_STATIC,0,0,100,75
+    LTEXT           "X",IDC_STATIC,5,10,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_X,15,10,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,5,26,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Y,15,26,25,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,5,41,8,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_Z,15,41,25,12,ES_AUTOHSCROLL
+    LTEXT           "内径",IDC_STATIC,45,10,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_INNER_R,65,10,25,12,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,46,42,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_HEIGHT,66,42,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "创建",IDC_KB_CREATE,31,57,44,12
+    GROUPBOX        "参数：",IDC_STATIC,0,80,105,57
+    CTEXT           "内径",IDC_STATIC,5,90,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_INNER_R,25,90,25,12,ES_AUTOHSCROLL
+    CTEXT           "高",IDC_STATIC,10,120,10,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_HEIGHT,25,120,25,12,ES_AUTOHSCROLL
+    CTEXT           "高分段",IDC_STATIC,50,90,25,10,SS_CENTERIMAGE
+    CTEXT           "径分段",IDC_STATIC,50,105,25,10,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_NH,75,90,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NR,75,105,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "外径",IDC_STATIC,46,27,18,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_KB_R,66,27,25,12,ES_AUTOHSCROLL
+    CTEXT           "外径",IDC_STATIC,5,105,15,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_PARA_R,25,105,25,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST_N,75,120,25,10,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OUTPUT DIALOG DISCARDABLE  0, 0, 183, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文件输出参数设置"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "输出",IDOK,7,86,50,14
+    PUSHBUTTON      "取消",IDCANCEL,61,86,50,14
+    LTEXT           "起始坐标:",IDC_STATIC,7,6,38,10
+    EDITTEXT        IDC_IX,21,20,34,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IY,21,38,34,12,ES_AUTOHSCROLL
+    LTEXT           "X",IDC_STATIC,7,22,8,12
+    LTEXT           "Y",IDC_STATIC,7,41,8,12
+    EDITTEXT        IDC_L,112,20,34,12,ES_AUTOHSCROLL
+    LTEXT           "长度",IDC_STATIC,88,22,17,12
+    EDITTEXT        IDC_W,112,38,34,12,ES_AUTOHSCROLL
+    LTEXT           "宽度",IDC_STATIC,88,40,17,12
+    LTEXT           "nm",IDC_STATIC,60,22,14,9
+    LTEXT           "nm",IDC_STATIC,59,40,14,9
+    LTEXT           "nm",IDC_STATIC,149,22,14,9
+    LTEXT           "nm",IDC_STATIC,149,39,14,9
+    PUSHBUTTON      "保存设置",ID_SAVE_PARAMETERS,117,86,50,14
+    EDITTEXT        IDC_H,113,57,34,12,ES_AUTOHSCROLL
+    LTEXT           "高度",IDC_STATIC,89,59,17,12
+    LTEXT           "nm",IDC_STATIC,149,58,14,9
+    EDITTEXT        IDC_SIZE,38,57,34,12,ES_AUTOHSCROLL
+    LTEXT           "放大率",IDC_STATIC,7,60,22,12
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ModelMaker  Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ModelMaker\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ModelMaker.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ModelMaker 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_MM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 765
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 464
+    END
+
+    IDD_PANEL_CREATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 396
+    END
+
+    IDD_PANEL_MODIFY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 114
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_PANEL_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 404
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 20
+    END
+
+    IDD_CUBOID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_CYLINDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_SPHERE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_CONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 103
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_TORUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_PIPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_OUTPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 100
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TOP MENU DISCARDABLE 
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "打开",                        IDR_MENU_FILE_OPEN
+        MENUITEM "保存",                        IDR_MENU_FILE_SAVE
+        MENUITEM "退出",                        IDR_MENU_FILE_EXIT
+    END
+    POPUP "编辑"
+    BEGIN
+        MENUITEM "撤销",                        IDR_MENU_EDIT_UNDO
+        MENUITEM "重做",                        IDR_MENU_EDIT_REDO
+    END
+    MENUITEM "插入",                        65535
+    MENUITEM "设置",                        65535
+END
+
+IDR_MENU_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "右键菜单"
+    BEGIN
+        MENUITEM "隐藏",                        ID_HIDE
+        MENUITEM "全部显示",                    ID_SHOW_ALL
+        MENUITEM "冻结",                        ID_FREEZE
+        MENUITEM "解冻",                        ID_FREE
+        MENUITEM "删除",                        ID_DELETE_OBJECT
+        MENUITEM "复制",                        ID_COPY
+        MENUITEM "粘贴",                        ID_PASTE
+        MENUITEM "导出CS模型",                  ID_EXPORT_CS
+        MENUITEM "编辑此物体",                  ID_EDIT_THIS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 MM(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MM.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
